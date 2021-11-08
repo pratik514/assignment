@@ -1,0 +1,536 @@
+package cg;
+import java.util.Scanner;
+q1
+
+public class P1 {
+
+	public static void main(String[] args) {
+Scanner sc=new Scanner(System.in);
+int n,copy,reminder,sum=0;
+System.out.print("enter the number");
+n=sc.nextInt();
+copy=n;
+while(copy!=0)
+{
+	reminder=copy%10;
+	sum=sum+reminder*reminder*reminder;
+	copy=copy/10;
+}
+if(sum==n)
+{
+	System.out.println("it is armstrong numbber");
+}
+else
+{System.out.println("it is not armstrong number");	
+}}}
+ ========================================================
+q2
+package cg;
+
+public class p2 {
+	// armstrong range
+		public static void main(String[] args) {
+		for(int i=100;i<=999;i++)
+	{
+			   int n=i;
+			   int d=0; //power
+	           int s=0;
+	        
+	    while(n>0)
+	    {
+		d=n%10;
+		s=s+(d*d*d);
+		n=n/10;
+		}
+	    if(i==s)
+	    {
+	    	System.out.println(i);
+	    }
+	}
+
+	}
+	}
+=========================================================
+q3
+package cg;
+import java.util .*;
+public class p3
+{
+    public static void main (String argu[ ])
+{
+    double pr, rate, t, sim,com;
+    Scanner sc=new Scanner (System. in);
+    System.out.println("Enter the amount:");
+    pr=sc.nextDouble();
+    System. out. println("Enter the No.of years:");
+    t=sc.nextDouble();
+    System. out. println("Enter the Rate of  interest");
+    rate=sc.nextDouble();
+    sim=(pr * t * rate)/100;
+    com=pr * Math.pow(1.0+rate/100.0,t) - pr;
+    System.out.println("Simple Interest="+sim);
+    System.out. println("Compound Interest="+com);
+   }
+}
+=======================================================
+q4
+
+package cg;
+import java.util.*;
+public class p4 
+
+{
+static void result(int [] x)
+	
+{
+		
+if(x[0] > 60)
+		
+{
+			
+if(x[1] > 60)
+			
+{
+				
+if(x[2] > 60)
+				
+{
+					
+System.out.println("Passed");
+				
+}
+				
+else
+				
+{
+					
+System.out.println("Promoted");
+				
+}	
+			
+}
+			
+else
+			
+{
+				
+System.out.println("Failed");
+			
+}
+		
+}
+
+else
+		
+{
+			
+System.out.println("Failed");
+		
+}
+	
+}
+
+	
+public static void main(String[] args) 
+	
+{
+		
+Scanner sc=new Scanner(System.in);
+		
+int i=0,j=0,temp;
+		
+int a[]=new int[3];
+		
+System.out.println("Enter marks of three subjects: ");
+		
+for(i=0;i<3;i++)
+		
+{
+			
+a[i]=sc.nextInt();
+		
+		
+}
+		
+for(i=0;i<3;i++)
+		
+{
+			
+for(j=i+1;j<3;j++)
+			
+{
+				
+if(a[i] < a[j])
+				
+{
+					
+temp=a[i];
+					
+a[i]=a[j];
+					
+a[j]=temp;
+							
+				
+}
+			
+}
+		
+}
+		
+result(a);
+	
+}
+
+}
+================================================
+q4
+
+package cg;
+import java.util.*;
+
+public class p5
+{
+	
+public static void main(String[] args) 
+{
+		
+Scanner sc=new Scanner(System.in);
+		
+double tax=0.0;
+		
+System.out.println("Enter your salary (per annum): ");
+		
+double salary=sc.nextDouble();
+		
+System.out.println("You salary per annum is "+salary);
+		
+if((salary > 0) && (salary < 180000))
+		
+{
+			
+tax=0.0;
+		
+}
+		
+else if((salary > 181001.0) && (salary < 300000.0))
+		
+{
+			
+tax=salary*(0.1);
+		
+}
+		
+else if((salary > 300001) && (salary < 500000))
+		
+{
+			
+tax=salary*(0.2);
+		
+}
+		
+else if((salary > 500001) && (salary < 1000000))
+		
+{
+			
+tax=salary*(0.3);
+		
+}
+		
+System.out.println("The income tax amount need to be paid is " +tax);
+	
+}
+
+}
+===============================================
+q6
+package cg;
+import java.util.*;
+class p6
+{
+	
+static void validation(String name,String pwd,int attempts)
+	
+{
+		
+String n="Shuaib",p="123";
+		
+int result;
+		
+if(attempts!=3)
+		
+{
+			
+if(name.equals(n) && pwd.equals(p))
+			
+{
+				
+System.out.println("Welcome " + name);
+			
+}
+			
+else
+			
+{
+				
+System.out.println("Invalid Login");
+				
+attempts=attempts+1;
+				
+enterDetails(attempts);
+				
+if(attempts==3)
+				
+{
+					
+System.out.println("Login limit exceeded....!!!");
+				
+}
+			
+}
+
+		
+}
+	
+}
+	
+static void enterDetails(int attempts)
+	
+{
+		
+Scanner sc=new Scanner(System.in);
+		
+String password,name;
+		
+System.out.println("Enter the username:");
+		
+name=sc.next();
+		
+System.out.println("Enter password:");
+		
+password=sc.next();
+		
+//System.out.println(name+"  "+password);
+		
+validation(name,password,attempts);
+	
+}
+	
+public static void main(String[] args) 
+	
+{
+		
+int attempts=1;
+		
+enterDetails(attempts);
+	
+}
+	
+	
+
+
+}
+===========================================
+q7
+package cg;
+import java.util.*;
+public class p7
+{
+	
+public static void main(String[] args) 
+	
+{
+		
+Scanner sc=new Scanner(System.in);
+		
+int a[]=new int[15];
+		
+int i,key;
+		
+boolean found=false;
+		
+System.out.println("Enter 15 elements in the array: ");
+		
+for(i=0;i<15;i++)
+		
+{
+			
+a[i]=sc.nextInt();
+		
+}
+		
+System.out.println("Enter the element to be searched: ");
+		
+key=sc.nextInt();
+		
+for(i=0;i<15;i++)
+		
+{
+			
+if(a[i]==key)
+			
+{
+				
+found=true;
+				
+System.out.println("Key " + key + " found in the array");
+				
+break;
+			
+}
+		
+}
+		
+if(found==false)
+		
+{
+			
+System.out.println("Key " + key + " not found in the array");
+		
+}
+
+	
+}
+
+}
+=================================================================
+q8
+package cg;
+import java.util.*;
+public class p8
+
+{
+	
+static void bubbleSort(int a[],int key)
+	
+{
+		
+int i,j,temp;
+		
+boolean found=false;
+		
+for(i=0;i<14;i++)
+		
+{
+			
+for(j=0;j<(14-i);j++)
+			
+{
+				
+if(a[j] > a[j+1])
+				
+{
+					
+temp=a[j];
+					
+a[j]=a[j+1];
+					
+a[j+1]=temp;
+				
+}
+				
+			
+}
+		
+}
+		
+for(i=0;i<15;i++)
+		
+{
+			
+if(a[i]==key)
+			
+{
+				
+found=true;
+				
+System.out.println("Key " + key + " found in the array");
+				
+break;
+			
+}
+		
+}
+		
+if(found==false)
+		
+{
+			
+System.out.println("Key " + key + " not found in the array");
+		
+}
+		
+	
+}
+
+	
+	
+public static void main(String[] args)
+	
+{
+		
+Scanner sc=new Scanner(System.in);
+		
+int a[]=new int[15];
+		
+int i,key;
+		
+System.out.println("Enter 15 elements in the array: ");
+		
+for(i=0;i<15;i++)
+		
+{
+			
+a[i]=sc.nextInt();
+		
+}
+		
+System.out.println("Enter the element to be searched: ");
+		
+key=sc.nextInt();
+		
+bubbleSort(a,key);
+	
+}
+
+}
+===================================================================
+package cg;
+import java.util.*;
+public class p9
+{
+	
+public static void main(String[] args) 
+	
+{
+		
+Scanner sc=new Scanner(System.in);
+		
+int a,b,c,total;
+		
+double avg=0.0;
+		
+System.out.println("Enter the marks of A subject: ");
+		
+a=sc.nextInt();
+		
+System.out.println("Enter the marks of B subject: ");
+		
+b=sc.nextInt();
+		
+System.out.println("Enter the marks of C subject: ");
+		
+c=sc.nextInt();
+		
+total=a+b+c;
+		
+avg=(total/3);
+		
+System.out.println("Total marks scored is "+total+" and average is "+avg);
+		
+//System.out.println("Total marks in A subject is "+a+" its average is "+(a/100));
+		
+	
+}
+
+}
+=======================================
