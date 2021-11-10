@@ -1,0 +1,119 @@
+q1
+package cg;
+import java.util.HashSet;
+
+public class Hashset {
+    public static void main(String[] args) {
+        Employee emp1=new Employee(1000,"pratik",20000,"SE");
+        Employee emp2=new Employee(101,"pramod",20000,"SE");
+        Employee emp3=new Employee(102,"manoj",40000,"Manager");
+
+        HashSet<Employee> emp=new HashSet<>();
+        emp.add(emp1);
+        emp.add(emp2);
+        emp.add(emp3);
+        
+        System.out.println("Details of Employees: ");
+        for(Employee a:emp){
+            a.displayDetails();
+        }
+    }
+
+
+
+}
+class Employee{
+    int id;
+    float salary;
+    String name, department;
+    public Employee(int id, String name, float salary, String department){
+        this.id=id;
+        this.name=name;
+        this.salary=salary;
+        this.department=department;
+    }
+    public void displayDetails(){
+        System.out.println("id :"+id+", Name :"+name+", salary :"+salary+", Dept :"+department);
+    }
+==========================================================================
+q4
+package cg;
+public class pairs<T> {
+	private String key;
+	private T value;
+	
+	public void setKey(String key) {
+		this.key=key;
+		System.out.println(this.key);
+	}
+	public void setValue(T value) {
+		this.value=value;
+		System.out.println(this.value);
+	}
+}
+==============================================================================
+q2
+package cg;
+import java.util.*;
+
+public class randomvalue {
+
+	public static void main(String[] args) {
+		HashMap<Integer,Double> p1=new HashMap<Integer,Double>(10);
+		p1.put(70,30.11);
+		p1.put(52,21.22);
+		p1.put(31,2.33);
+		p1.put(14,53.00);
+		p1.put(95,64.22);
+		p1.put(46,35.33);
+		p1.put(67,96.44);
+		p1.put(78,77.55);
+		p1.put(99,68.66);
+		p1.put(40,59.77);
+		System.out.println(p1);
+	}
+
+}
+============================================================
+q4a
+package cg;
+
+public class pairs1 {
+
+	public static void main(String[] args) {
+		
+		pairs p=new pairs();
+		p.setKey("1");
+		p.setValue("Value");
+		System.out.println("-------------------------------------------------");
+		p.setKey("Today is: ");
+		p.setValue(new java.util.Date());
+		
+	}
+	}
+
+==================================================================
+q3
+package cg;
+public class gmethod {
+	public static <T> void pass(T[] arr,int x,int y) {
+		
+		T t=arr[(int) x];
+		arr[(int) x]=arr[(int) y];
+		arr[(int) y]=t;
+		for(T e:arr) {
+			System.out.println(e);
+		}
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Integer ar[]= {20,10,40};
+		
+		
+		pass(ar,1,2);
+		
+	}
+	}
+=======================================================================
+
